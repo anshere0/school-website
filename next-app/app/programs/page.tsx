@@ -17,7 +17,7 @@ export default function ProgramsPage() {
       ratio: "1:6 Student-Teacher Ratio",
       description:
         "Our Playgroup curriculum focuses on sensory integration, safe exploration, and emotional trust. Toddlers learn to navigate transitions, express feelings, and develop key fine motor controls in a warm, play-first layout.",
-      image: "/images/activities/playgroup.jpg",
+      image: "/images/activities/playgroup.png",
       shape: 1,
       color: "yellow" as const,
       placeholderIcon: "smile" as const,
@@ -46,7 +46,7 @@ export default function ProgramsPage() {
       ratio: "1:8 Student-Teacher Ratio",
       description:
         "The Nursery year introduces basic language literacy, numbers, and structured socialization. Toddlers explore themes like 'Our Helpers' and 'Nature' to broaden cognitive curiosity and physical coordination.",
-      image: "/images/activities/nursery.jpg",
+      image: "/images/activities/nursery.png",
       shape: 2,
       color: "green" as const,
       placeholderIcon: "sparkles" as const,
@@ -75,7 +75,7 @@ export default function ProgramsPage() {
       ratio: "1:10 Student-Teacher Ratio",
       description:
         "Junior KG emphasizes cognitive logical reasoning and preschool writing readiness. Children begin tracing characters, solving multi-step puzzles, and working in collaborative groups to foster communication skills.",
-      image: "/images/activities/junior-kg.jpg",
+      image: "/images/activities/junior-kg.png",
       shape: 3,
       color: "blue" as const,
       placeholderIcon: "education" as const,
@@ -104,7 +104,7 @@ export default function ProgramsPage() {
       ratio: "1:12 Student-Teacher Ratio",
       description:
         "Senior KG serves as the final, premium launchpad to primary schooling. The curriculum covers reading comprehension, fundamental math subtraction/addition, environmental science, and public speaking.",
-      image: "/images/activities/senior-kg.jpg",
+      image: "/images/activities/senior-kg.png",
       shape: 4,
       color: "red" as const,
       placeholderIcon: "trophy" as const,

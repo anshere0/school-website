@@ -53,7 +53,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="w-full max-w-[320px] aspect-square relative">
                 <OrganicBlobImage
-                  src="/images/gallery/story-foundation.jpg"
+                  src="/images/gallery/story-foundation.png"
                   alt="Our historical school journey"
                   shape={2}
                   color="red"
@@ -115,7 +115,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 flex justify-center order-last lg:order-first">
               <div className="w-full max-w-[320px] aspect-square relative">
                 <OrganicBlobImage
-                  src="/images/teachers/founder.jpg"
+                  src="/images/teachers/founder.png"
                   alt="Founder Mrs. Neeta Sharma"
                   shape={3}
                   color="yellow"

@@ -20,16 +20,16 @@ const CATEGORIES = [
 ]
 
 const GALLERY_ITEMS = [
-  { id: 1, title: "Toddler Learning Board", category: "Classrooms", src: "/images/gallery/classroom-1.jpg", shape: 1, color: "yellow" as const, icon: "education" as const },
-  { id: 2, title: "Water and Sponge Sensory Play", category: "Activities", src: "/images/gallery/activities-1.jpg", shape: 2, color: "green" as const, icon: "smile" as const },
-  { id: 3, title: "Grandparents Meet Celebration", category: "Events", src: "/images/gallery/events-1.jpg", shape: 3, color: "blue" as const, icon: "heart" as const },
-  { id: 4, title: "Independence Day Dress-up", category: "Celebrations", src: "/images/gallery/celebrations-1.jpg", shape: 4, color: "red" as const, icon: "sparkles" as const },
-  { id: 5, title: "Mini Athletics Obstacle Run", category: "Sports Day", src: "/images/gallery/sports-1.jpg", shape: 3, color: "yellow" as const, icon: "trophy" as const },
-  { id: 6, title: "Annual Cultural Dance Drama", category: "Annual Day", src: "/images/gallery/annual-1.jpg", shape: 1, color: "green" as const, icon: "sparkles" as const },
-  { id: 7, title: "Montessori Wooden Blocks", category: "Classrooms", src: "/images/gallery/classroom-2.jpg", shape: 4, color: "blue" as const, icon: "art" as const },
-  { id: 8, title: "Clay Squeezing Craft", category: "Activities", src: "/images/gallery/activities-2.jpg", shape: 2, color: "red" as const, icon: "smile" as const },
-  { id: 9, title: "Annual Day Rhyming Play", category: "Annual Day", src: "/images/gallery/annual-2.jpg", shape: 3, color: "yellow" as const, icon: "trophy" as const },
-  { id: 10, title: "Christmas Carol Circle", category: "Celebrations", src: "/images/gallery/celebrations-2.jpg", shape: 1, color: "green" as const, icon: "heart" as const },
+  { id: 1, title: "Toddler Learning Board", category: "Classrooms", src: "/images/gallery/classroom-1.png", shape: 1, color: "yellow" as const, icon: "education" as const },
+  { id: 2, title: "Water and Sponge Sensory Play", category: "Activities", src: "/images/gallery/activities-1.png", shape: 2, color: "green" as const, icon: "smile" as const },
+  { id: 3, title: "Grandparents Meet Celebration", category: "Events", src: "/images/gallery/events-1.png", shape: 3, color: "blue" as const, icon: "heart" as const },
+  { id: 4, title: "Independence Day Dress-up", category: "Celebrations", src: "/images/gallery/celebrations-1.png", shape: 4, color: "red" as const, icon: "sparkles" as const },
+  { id: 5, title: "Mini Athletics Obstacle Run", category: "Sports Day", src: "/images/gallery/sports-1.png", shape: 3, color: "yellow" as const, icon: "trophy" as const },
+  { id: 6, title: "Annual Cultural Dance Drama", category: "Annual Day", src: "/images/gallery/annual-1.png", shape: 1, color: "green" as const, icon: "sparkles" as const },
+  { id: 7, title: "Montessori Wooden Blocks", category: "Classrooms", src: "/images/gallery/classroom-2.png", shape: 4, color: "blue" as const, icon: "art" as const },
+  { id: 8, title: "Clay Squeezing Craft", category: "Activities", src: "/images/gallery/activities-2.png", shape: 2, color: "red" as const, icon: "smile" as const },
+  { id: 9, title: "Annual Day Rhyming Play", category: "Annual Day", src: "/images/gallery/annual-2.png", shape: 3, color: "yellow" as const, icon: "trophy" as const },
+  { id: 10, title: "Christmas Carol Circle", category: "Celebrations", src: "/images/gallery/celebrations-2.png", shape: 1, color: "green" as const, icon: "heart" as const },
 ]
 
 export default function GalleryPage() {

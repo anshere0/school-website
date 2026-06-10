@@ -157,7 +157,7 @@ export default function HomePage() {
               <div className="w-full max-w-[400px] aspect-square relative">
                 {/* Asymmetrical Blob Wrapper */}
                 <OrganicBlobImage
-                  src="/images/hero/hero-child.jpg"
+                  src="/images/hero/hero-child.png"
                   alt="Happy toddler learning at My Wings Academy"
                   shape={1}
                   color="yellow"
@@ -328,14 +328,14 @@ export default function HomePage() {
             <div className="lg:col-span-6 grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-4">
                 <OrganicBlobImage
-                  src="/images/facilities/classroom.jpg"
+                  src="/images/facilities/classroom.png"
                   alt="Modern creative classrooms"
                   shape={2}
                   color="blue"
                   placeholderIcon="art"
                 />
                 <OrganicBlobImage
-                  src="/images/facilities/play-area.jpg"
+                  src="/images/facilities/play-area.png"
                   alt="Safe child play areas"
                   shape={4}
                   color="green"
@@ -344,7 +344,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col gap-4 justify-center">
                 <OrganicBlobImage
-                  src="/images/facilities/learning-space.jpg"
+                  src="/images/facilities/learning-space.png"
                   alt="Modern learning spaces"
                   shape={3}
                   color="red"
