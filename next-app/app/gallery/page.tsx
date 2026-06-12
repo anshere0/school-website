@@ -11,25 +11,68 @@ import { OrganicBlobImage } from "@/components/shared/OrganicBlobImage"
 
 const CATEGORIES = [
   "All",
+  "School Campus",
   "Classrooms",
   "Activities",
+  "Facilities",
   "Events",
-  "Celebrations",
   "Sports Day",
   "Annual Day",
+  "Garba",
+  "Janmashtami",
+  "Graduation",
+  "Doctor Camps",
+  "Competitions",
 ]
 
 const GALLERY_ITEMS = [
+  // Classrooms
   { id: 1, title: "Toddler Learning Board", category: "Classrooms", src: "/images/gallery/classroom-1.png", shape: 1, color: "yellow" as const, icon: "education" as const },
-  { id: 2, title: "Water and Sponge Sensory Play", category: "Activities", src: "/images/gallery/activities-1.png", shape: 2, color: "green" as const, icon: "smile" as const },
-  { id: 3, title: "Grandparents Meet Celebration", category: "Events", src: "/images/gallery/events-1.png", shape: 3, color: "blue" as const, icon: "heart" as const },
-  { id: 4, title: "Independence Day Dress-up", category: "Celebrations", src: "/images/gallery/celebrations-1.png", shape: 4, color: "red" as const, icon: "sparkles" as const },
-  { id: 5, title: "Mini Athletics Obstacle Run", category: "Sports Day", src: "/images/gallery/sports-1.png", shape: 3, color: "yellow" as const, icon: "trophy" as const },
-  { id: 6, title: "Annual Cultural Dance Drama", category: "Annual Day", src: "/images/gallery/annual-1.png", shape: 1, color: "green" as const, icon: "sparkles" as const },
-  { id: 7, title: "Montessori Wooden Blocks", category: "Classrooms", src: "/images/gallery/classroom-2.png", shape: 4, color: "blue" as const, icon: "art" as const },
-  { id: 8, title: "Clay Squeezing Craft", category: "Activities", src: "/images/gallery/activities-2.png", shape: 2, color: "red" as const, icon: "smile" as const },
-  { id: 9, title: "Annual Day Rhyming Play", category: "Annual Day", src: "/images/gallery/annual-2.png", shape: 3, color: "yellow" as const, icon: "trophy" as const },
-  { id: 10, title: "Christmas Carol Circle", category: "Celebrations", src: "/images/gallery/celebrations-2.png", shape: 1, color: "green" as const, icon: "heart" as const },
+  { id: 2, title: "Montessori Wooden Blocks", category: "Classrooms", src: "/images/gallery/classroom-2.png", shape: 4, color: "blue" as const, icon: "art" as const },
+  { id: 3, title: "Creative Writing Environment", category: "Classrooms", src: "/images/gallery/activity-class-1.jpg", shape: 2, color: "green" as const, icon: "smile" as const },
+  
+  // Activities
+  { id: 4, title: "Water and Sponge Sensory Play", category: "Activities", src: "/images/gallery/activities-1.png", shape: 2, color: "green" as const, icon: "smile" as const },
+  { id: 5, title: "Clay Squeezing Craft", category: "Activities", src: "/images/gallery/activities-2.png", shape: 3, color: "red" as const, icon: "smile" as const },
+  { id: 6, title: "Toddlers Drawing Circle", category: "Activities", src: "/images/gallery/activity-class-2.jpg", shape: 1, color: "blue" as const, icon: "art" as const },
+  { id: 7, title: "Fine Motor Activity Stacking", category: "Activities", src: "/images/gallery/activity-class-3.jpg", shape: 4, color: "yellow" as const, icon: "sparkles" as const },
+  
+  // Events
+  { id: 8, title: "Grandparents Meet Celebration", category: "Events", src: "/images/gallery/events-1.png", shape: 3, color: "blue" as const, icon: "heart" as const },
+  { id: 9, title: "Special Campus Meetup", category: "Events", src: "/images/gallery/whatsapp-event-1.jpeg", shape: 1, color: "yellow" as const, icon: "smile" as const },
+  
+  // Celebrations
+  { id: 10, title: "Independence Day Dress-up", category: "Celebrations", src: "/images/gallery/celebrations-1.png", shape: 4, color: "red" as const, icon: "sparkles" as const },
+  { id: 11, title: "Christmas Carol Circle", category: "Celebrations", src: "/images/gallery/celebrations-2.png", shape: 1, color: "green" as const, icon: "heart" as const },
+  
+  // Sports Day
+  { id: 12, title: "Mini Athletics Obstacle Run", category: "Sports Day", src: "/images/gallery/sports-1.png", shape: 3, color: "yellow" as const, icon: "trophy" as const },
+  { id: 13, title: "Toddler Running Race", category: "Sports Day", src: "/images/gallery/event-sports-1.jpg", shape: 2, color: "blue" as const, icon: "trophy" as const },
+  { id: 14, title: "Fun Obstacle Training", category: "Sports Day", src: "/images/gallery/event-sports-2.jpg", shape: 4, color: "green" as const, icon: "smile" as const },
+  
+  // Annual Day
+  { id: 15, title: "Annual Cultural Dance Drama", category: "Annual Day", src: "/images/gallery/annual-1.png", shape: 1, color: "green" as const, icon: "sparkles" as const },
+  { id: 16, title: "Annual Day Rhyming Play", category: "Annual Day", src: "/images/gallery/annual-2.png", shape: 3, color: "yellow" as const, icon: "trophy" as const },
+  { id: 17, title: "Vibrant Stage Show", category: "Annual Day", src: "/images/gallery/event-annual-1.jpg", shape: 2, color: "red" as const, icon: "sparkles" as const },
+  { id: 18, title: "Toddler Group Choir", category: "Annual Day", src: "/images/gallery/event-annual-2.jpg", shape: 4, color: "blue" as const, icon: "music" as const },
+  
+  // Graduation
+  { id: 19, title: "SR KG Convocation Ceremony", category: "Graduation", src: "/images/gallery/event-grad-1.jpg", shape: 3, color: "red" as const, icon: "education" as const },
+  
+  // Doctor Camps
+  { id: 20, title: "Pediatric Doctor Health Camp", category: "Doctor Camps", src: "/images/gallery/activity-class-4.jpg", shape: 1, color: "green" as const, icon: "heart" as const },
+  
+  // Competitions
+  { id: 21, title: "Preschool Rangoli Competition", category: "Competitions", src: "/images/gallery/activity-class-5.jpg", shape: 2, color: "blue" as const, icon: "art" as const },
+  { id: 22, title: "Festival Decoration Competition", category: "Competitions", src: "/images/gallery/whatsapp-event-2.jpeg", shape: 4, color: "yellow" as const, icon: "sparkles" as const },
+  
+  // Facilities
+  { id: 23, title: "Playgroup Creative Room", category: "Facilities", src: "/images/facilities/classroom.png", shape: 1, color: "yellow" as const, icon: "art" as const },
+  { id: 24, title: "Toddler Active play yard", category: "Facilities", src: "/images/facilities/play-area.png", shape: 3, color: "green" as const, icon: "smile" as const },
+  { id: 25, title: "Interactive Library Loft", category: "Facilities", src: "/images/facilities/library.png", shape: 2, color: "blue" as const, icon: "education" as const },
+  
+  // School Campus
+  { id: 26, title: "Safe School Campus Checkpoint", category: "School Campus", src: "/images/facilities/security.png", shape: 4, color: "red" as const, icon: "heart" as const },
 ]
 
 export default function GalleryPage() {
@@ -179,7 +222,7 @@ export default function GalleryPage() {
                       {selectedItem.title}
                     </h3>
                     <p className="text-xs text-muted-foreground font-sans mt-1">
-                      My Wings Academy educational showcase placeholder. Photos are regularly updated.
+                      Captured during real events, classroom routines, and campus celebrations.
                     </p>
                   </div>
                 </div>

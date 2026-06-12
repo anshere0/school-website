@@ -12,40 +12,42 @@ export default function ProgramsPage() {
   const programDetails = [
     {
       value: "playgroup",
-      title: "Playgroup Program",
-      age: "1.5 - 2.5 Years",
-      ratio: "1:6 Student-Teacher Ratio",
+      title: "Fun Club (Playgroup)",
+      shortTitle: "Fun Club",
+      age: "2.0 - 3.0 Years",
+      ratio: "1:8 Student-Teacher Ratio",
       description:
-        "Our Playgroup curriculum focuses on sensory integration, safe exploration, and emotional trust. Toddlers learn to navigate transitions, express feelings, and develop key fine motor controls in a warm, play-first layout.",
+        "Our Fun Club Playgroup focuses on sensory integration, emotional trust, and basic socialization. Toddlers explore textures, sounds, and play coordinates in a highly safe, caring motherly layout.",
       image: "/images/activities/playgroup.png",
       shape: 1,
       color: "yellow" as const,
       placeholderIcon: "smile" as const,
       goals: [
         "Develop primary hand-eye coordination (stacking, squeezing)",
-        "Build vocabulary words and express simple needs",
-        "Form secure peer relationships and manage early transitions",
+        "Build early spoken vocabulary and express simple needs",
+        "Form secure peer relationships and manage transition times",
         "Sensory awareness through art, water, and sand play",
       ],
       activities: [
-        "Finger painting & textured clay squeeze",
-        "Nursery rhyming circles & sound association",
-        "Safe crawling tunnels & soft block towers",
-        "Montessori wooden puzzle sorting",
+        "Finger painting & textured clay play",
+        "Rhyme singing & sound association circles",
+        "Safe crawl tunnels & soft block towers",
+        "Montessori wooden toy stacking & sorting",
       ],
       outcomes: [
-        "Primary fine motor grip and balance control",
-        "Expressive speech expansion (simple two-word phrases)",
-        "Willingness to share toys under mentor guidance",
+        "Primary fine motor grip and walking balance",
+        "Spoken word expansion (simple vocabulary expressions)",
+        "Willingness to share play tools under guidance",
       ],
     },
     {
       value: "nursery",
       title: "Nursery Program",
-      age: "2.5 - 3.5 Years",
+      shortTitle: "Nursery",
+      age: "3.0 - 4.0 Years",
       ratio: "1:8 Student-Teacher Ratio",
       description:
-        "The Nursery year introduces basic language literacy, numbers, and structured socialization. Toddlers explore themes like 'Our Helpers' and 'Nature' to broaden cognitive curiosity and physical coordination.",
+        "The Nursery year introduces verbal expression, basic numbers, shape recognition, and circle-time interactions. Curriculums emphasize confidence-building and speech fluency.",
       image: "/images/activities/nursery.png",
       shape: 2,
       color: "green" as const,
@@ -69,41 +71,43 @@ export default function ProgramsPage() {
       ],
     },
     {
-      value: "junior-kg",
-      title: "Junior KG Program",
-      age: "3.5 - 4.5 Years",
-      ratio: "1:10 Student-Teacher Ratio",
+      value: "lkg",
+      title: "LKG (Lower Kindergarten)",
+      shortTitle: "LKG",
+      age: "4.0 - 5.0 Years",
+      ratio: "1:8 Student-Teacher Ratio",
       description:
-        "Junior KG emphasizes cognitive logical reasoning and preschool writing readiness. Children begin tracing characters, solving multi-step puzzles, and working in collaborative groups to foster communication skills.",
+        "LKG focuses on cognitive development, structured tracing, early writing, and logical number sequencing. Kids learn to problem-solve and cooperate in groups.",
       image: "/images/activities/junior-kg.png",
       shape: 3,
       color: "blue" as const,
       placeholderIcon: "education" as const,
       goals: [
-        "Trace characters, write basic numbers, and recognize words",
-        "Develop early math comprehension (addition concepts, sorting)",
-        "Encourage peer problem-solving and joint project builds",
-        "Foster curiosity in biology (plants, seeds) and physics (water play)",
+        "Trace characters, write numbers, and read simple words",
+        "Develop math logic (size association, grouping patterns)",
+        "Encourage collaborative play and peer problem-solving",
+        "Foster basic biology concepts (gardening, seed planting)",
       ],
       activities: [
-        "Phonics workbook tracing & slate drawing",
-        "Basic science lab (plant seeds, magnifying glass)",
-        "Puzzles, pattern blocks, and logic board games",
-        "Structured craft cutting and bead-threading projects",
+        "Letter tracing slate worksheets & drawing",
+        "Puzzles, pattern blocks, and logic building boards",
+        "Bouncing & throwing coordinates physical plays",
+        "Theme-based group craft cutting & paper sticking",
       ],
       outcomes: [
         "Read basic 3-letter words and write numbers 1 to 20",
-        "Understand spatial relationship concepts (above, below, next to)",
-        "Resolve small peer disagreements independently",
+        "Understand spatial relation terms (above, below, beside)",
+        "Resolve minor peer arguments with words under guidance",
       ],
     },
     {
-      value: "senior-kg",
-      title: "Senior KG Program",
-      age: "4.5 - 5.5 Years",
-      ratio: "1:12 Student-Teacher Ratio",
+      value: "srkg",
+      title: "SR KG (Senior Kindergarten)",
+      shortTitle: "SR KG",
+      age: "5.0 - 6.0 Years",
+      ratio: "1:8 Student-Teacher Ratio",
       description:
-        "Senior KG serves as the final, premium launchpad to primary schooling. The curriculum covers reading comprehension, fundamental math subtraction/addition, environmental science, and public speaking.",
+        "SR KG builds deep reading comprehension, basic mathematics (addition/subtraction), public speaking, and school transition readiness. Focuses on confidence.",
       image: "/images/activities/senior-kg.png",
       shape: 4,
       color: "red" as const,
@@ -124,6 +128,36 @@ export default function ProgramsPage() {
         "Read books independently and write small journals",
         "Fluently add/subtract numbers 1 through 10",
         "Confident social skills ready for any standard primary school",
+      ],
+    },
+    {
+      value: "grade1",
+      title: "Grade 1 Foundation",
+      shortTitle: "Grade 1",
+      age: "6.0 - 7.0 Years",
+      ratio: "1:8 Student-Teacher Ratio",
+      description:
+        "A hybrid transition module bridges preschool playing with formal primary school expectations, focusing on reading comprehension, science, and math logic.",
+      image: "/images/gallery/story-foundation.png",
+      shape: 1,
+      color: "yellow" as const,
+      placeholderIcon: "heart" as const,
+      goals: [
+        "Fluent sentence writing and reading comprehension",
+        "Advanced math logic (number lines, measurements)",
+        "Develop self-management, focus, and study organization",
+        "General awareness of environment, community, and basic sciences",
+      ],
+      activities: [
+        "Creative story writing & grammar exercises",
+        "Mental math play, pattern mapping, counting grids",
+        "Scientific exploration projects (water cycles, magnifying glass)",
+        "Self-discipline games & interactive social roundtables",
+      ],
+      outcomes: [
+        "Fluent reading of early chapter books and journals",
+        "Strong logical foundations for primary school mathematics",
+        "Complete transition readiness for primary school schedules",
       ],
     },
   ]
@@ -155,14 +189,14 @@ export default function ProgramsPage() {
             <Tabs defaultValue="playgroup" className="w-full flex flex-col gap-10">
               
               {/* Tabs list styled child-friendly */}
-              <TabsList className="grid grid-cols-2 md:grid-cols-4 h-auto p-1.5 bg-cream-card border-2 border-dark-text rounded-2xl md:rounded-full gap-2 shrink-0">
+              <TabsList className="grid grid-cols-2 md:grid-cols-5 h-auto p-1.5 bg-cream-card border-2 border-dark-text rounded-2xl md:rounded-full gap-2 shrink-0">
                 {programDetails.map((prog) => (
                   <TabsTrigger
                     key={prog.value}
                     value={prog.value}
                     className="font-heading text-sm md:text-base font-bold py-2.5 md:py-3.5 rounded-xl md:rounded-full data-[state=active]:bg-primary-yellow data-[state=active]:text-dark-text data-[state=active]:border-2 data-[state=active]:border-dark-text transition-all data-[state=active]:shadow-sm cursor-pointer"
                   >
-                    {prog.title.split(" ")[0]}
+                    {prog.shortTitle || prog.title}
                   </TabsTrigger>
                 ))}
               </TabsList>

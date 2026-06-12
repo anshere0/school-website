@@ -270,10 +270,11 @@ export function InquiryForm() {
                   <option value="" disabled>
                     -- Select Program --
                   </option>
-                  <option value="Playgroup">Playgroup (1.5 - 2.5 Years)</option>
-                  <option value="Nursery">Nursery (2.5 - 3.5 Years)</option>
-                  <option value="Junior KG">Junior KG (3.5 - 4.5 Years)</option>
-                  <option value="Senior KG">Senior KG (4.5 - 5.5 Years)</option>
+                  <option value="Fun Club (Playgroup)">Fun Club (Playgroup) (Age 2–3)</option>
+                  <option value="Nursery">Nursery (Age 3–4)</option>
+                  <option value="LKG">LKG (Age 4–5)</option>
+                  <option value="SR KG">SR KG (Age 5–6)</option>
+                  <option value="Grade 1 Foundation">Grade 1 Foundation (Age 6–7)</option>
                 </select>
                 {errors.preferredProgram && (
                   <span className="text-xs text-primary-red flex items-center gap-1 font-sans">

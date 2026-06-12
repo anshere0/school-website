@@ -13,7 +13,7 @@ export const InquirySchema = z.object({
     .max(15, "Mobile number must not exceed 15 digits")
     .regex(/^[0-9+\s-]{10,15}$/, "Please enter a valid phone number"),
   email: z.string().email("Please enter a valid email address"),
-  preferredProgram: z.enum(["Playgroup", "Nursery", "Junior KG", "Senior KG"]),
+  preferredProgram: z.enum(["Fun Club (Playgroup)", "Nursery", "LKG", "SR KG", "Grade 1 Foundation"]),
   message: z.string().optional(),
 })
 

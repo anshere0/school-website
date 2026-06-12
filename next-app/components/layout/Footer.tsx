@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Heart, Phone, Mail, MapPin, MessageSquare } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -13,8 +14,14 @@ export function Footer() {
           {/* Column 1: Brand Info */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2 group self-start">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary-red text-primary-yellow shadow-md transition-transform group-hover:scale-105">
-                <Heart className="h-5 w-5 fill-current" />
+              <div className="relative flex h-10 w-10 items-center justify-center rounded-2xl bg-white border border-dark-text overflow-hidden shadow-sm transition-transform group-hover:scale-105">
+                <Image
+                  src="/images/logo/logo.jpeg"
+                  alt="My Wings Academy Logo"
+                  width={40}
+                  height={40}
+                  className="object-cover"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-heading text-lg font-bold text-dark-text tracking-wide dark:text-foreground">
@@ -26,11 +33,11 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm font-sans text-muted-foreground leading-relaxed">
-              A premium childhood environment built to inspire safety, trust, cognitive growth, and lifelong creativity. Fostering development since 2018.
+              A premium childhood environment built to inspire safety, trust, cognitive growth, and lifelong creativity. Fostering development since 2011.
             </p>
             <div className="flex items-center gap-3 mt-2">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/mywingsacademy/"
                 target="_blank"
                 rel="noreferrer"
                 className="h-9 w-9 rounded-full bg-primary-yellow/10 border border-primary-yellow/20 flex items-center justify-center text-dark-text hover:bg-primary-yellow hover:text-dark-text dark:text-foreground dark:hover:text-dark-text transition-all"
@@ -46,7 +53,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/mywings_academy/"
                 target="_blank"
                 rel="noreferrer"
                 className="h-9 w-9 rounded-full bg-primary-yellow/10 border border-primary-yellow/20 flex items-center justify-center text-dark-text hover:bg-primary-yellow hover:text-dark-text dark:text-foreground dark:hover:text-dark-text transition-all"
@@ -69,7 +76,23 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/15551234567"
+                href="https://www.youtube.com/@mywingsacademy2748"
+                target="_blank"
+                rel="noreferrer"
+                className="h-9 w-9 rounded-full bg-primary-yellow/10 border border-primary-yellow/20 flex items-center justify-center text-dark-text hover:bg-primary-yellow hover:text-dark-text dark:text-foreground dark:hover:text-dark-text transition-all"
+                aria-label="YouTube Channel"
+                id="footer-social-youtube"
+              >
+                <svg
+                  className="h-4 w-4 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.524 3.545 12 3.545 12 3.545s-7.525 0-9.388.51a3.003 3.003 0 0 0-2.11 2.108C0 8.029 0 12 0 12s0 3.971.502 5.837a3.003 3.003 0 0 0 2.11 2.108c1.863.51 9.388.51 9.388.51s7.524 0 9.388-.51a3.003 3.003 0 0 0 2.11-2.108c.502-1.866.502-5.837.502-5.837s0-3.971-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/918000291158"
                 target="_blank"
                 rel="noreferrer"
                 className="h-9 w-9 rounded-full bg-primary-yellow/10 border border-primary-yellow/20 flex items-center justify-center text-dark-text hover:bg-primary-yellow hover:text-dark-text dark:text-foreground dark:hover:text-dark-text transition-all"
@@ -132,29 +155,32 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary-red shrink-0" />
                 <span>
-                  123 Wings Way, Sector 4,
+                  B-34 Samruddhi Tenament, Opp. Priti Enclave,
                   <br />
-                  Creative Kidz Circle, New Delhi 110001
+                  Near Amin Party Plot, Rajesh Tower Road,
+                  <br />
+                  Vadodara, Gujarat – 390023
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-brand-green shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-primary-red transition-colors" id="footer-call-action">
-                  +91 98765 43210
+                <a href="tel:+918000291158" className="hover:text-primary-red transition-colors" id="footer-call-action">
+                  +91 80002 91158
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-brand-blue shrink-0" />
-                <a href="mailto:admissions@mywingsacademy.com" className="hover:text-primary-red transition-colors" id="footer-email-action">
-                  admissions@mywingsacademy.com
+                <a href="mailto:leenachopra@yahoo.com" className="hover:text-primary-red transition-colors" id="footer-email-action">
+                  leenachopra@yahoo.com
                 </a>
               </div>
               <div className="pt-2 border-t border-border/20 text-xs">
                 <span className="font-semibold block text-dark-text dark:text-foreground mb-0.5">
-                  School Hours:
+                  Timings:
                 </span>
-                <span>Mon - Fri: 8:00 AM - 1:30 PM</span>
-                <span className="block">Sat: 9:00 AM - 12:00 PM</span>
+                <span>School Timing: 9:00 AM - 12:00 PM</span>
+                <span className="block">Office Timing: 8:00 AM - 7:00 PM</span>
+                <span className="block text-primary-red font-medium">Sunday Closed</span>
               </div>
             </div>
           </div>

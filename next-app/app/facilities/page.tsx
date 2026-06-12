@@ -1,6 +1,6 @@
 "use client"
 
-import { Shield, Sparkles, Smile, BookOpen, Heart, Eye } from "lucide-react"
+import { Shield, Sparkles, Smile, BookOpen, Heart, Eye, Palette, Music, Award, Truck, Coffee, GlassWater } from "lucide-react"
 
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
@@ -147,8 +147,51 @@ export default function FacilitiesPage() {
           </div>
         </section>
 
+        {/* Facilities Checklist Grid */}
+        <section className="py-20 bg-background border-t-2 border-dashed border-border/40 px-4 sm:px-6">
+          <div className="container mx-auto max-w-5xl text-center">
+            <SectionHeader
+              title="Our Campus Amenities"
+              subtitle="Every corner is designed for toddler safety, physical play, and visual guidance."
+              badge="Amenities Checklist"
+              badgeColor="green"
+            />
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-12">
+              {[
+                { title: "CCTV Surveillance", icon: Shield, color: "bg-primary-red/10 border-primary-red" },
+                { title: "Indoor Play Area", icon: Smile, color: "bg-primary-yellow/15 border-primary-yellow" },
+                { title: "Outdoor Play Area", icon: Smile, color: "bg-brand-green/10 border-brand-green" },
+                { title: "Activity Room", icon: Sparkles, color: "bg-brand-blue/10 border-brand-blue" },
+                { title: "Reading Corner", icon: BookOpen, color: "bg-brand-purple/10 border-brand-purple" },
+                { title: "Art & Craft Area", icon: Palette, color: "bg-brand-pink/10 border-brand-pink" },
+                { title: "Music Activities", icon: Music, color: "bg-brand-orange/10 border-brand-orange" },
+                { title: "Dance Activities", icon: Music, color: "bg-brand-blue/10 border-brand-blue" },
+                { title: "First Aid Facility", icon: Heart, color: "bg-primary-red/10 border-primary-red" },
+                { title: "Safe Drinking Water", icon: GlassWater, color: "bg-brand-green/10 border-brand-green" },
+                { title: "Transportation Cab", icon: Truck, color: "bg-primary-yellow/15 border-primary-yellow" },
+                { title: "Parent Waiting Area", icon: Coffee, color: "bg-brand-purple/10 border-brand-purple" },
+                { title: "Educational Toys", icon: Award, color: "bg-brand-pink/10 border-brand-pink" },
+                { title: "Learning Materials", icon: BookOpen, color: "bg-brand-orange/10 border-brand-orange" },
+              ].map((item, idx) => {
+                const Icon = item.icon
+                return (
+                  <div
+                    key={idx}
+                    className={`p-4 rounded-2xl border border-dark-text ${item.color} flex flex-col items-center justify-center text-center gap-2 hover:scale-[1.03] transition-transform shadow-sm`}
+                  >
+                    <Icon className="h-5 w-5 text-dark-text" />
+                    <span className="font-heading font-bold text-xs sm:text-sm text-dark-text">
+                      {item.title}
+                    </span>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
         {/* Safety standards callout */}
-        <section className="py-20 bg-cream-card/50 border-t-2 border-border/40 px-4 sm:px-6">
+        <section className="py-20 bg-cream-card border-t-2 border-border/40 px-4 sm:px-6">
           <div className="container mx-auto max-w-4xl text-center">
             <SectionHeader
               title="Hygiene & Care Standards"
@@ -179,7 +222,7 @@ export default function FacilitiesPage() {
                 return (
                   <div
                     key={idx}
-                    className="p-6 rounded-2xl border border-dark-text/10 bg-background shadow-sm flex flex-col items-center"
+                    className="p-6 rounded-2xl border-2 border-dark-text bg-background shadow-warm flex flex-col items-center text-left"
                   >
                     <div className="h-10 w-10 rounded-full bg-primary-yellow/15 flex items-center justify-center mb-3">
                       <Icon className="h-5 w-5 text-dark-text" />
@@ -187,7 +230,7 @@ export default function FacilitiesPage() {
                     <h3 className="font-heading text-base font-bold text-dark-text dark:text-foreground mb-1.5">
                       {std.title}
                     </h3>
-                    <p className="text-xs text-muted-foreground text-center font-sans leading-relaxed">
+                    <p className="text-xs text-muted-foreground font-sans leading-relaxed">
                       {std.desc}
                     </p>
                   </div>

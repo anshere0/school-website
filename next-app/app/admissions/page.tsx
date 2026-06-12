@@ -53,28 +53,43 @@ const REQUIRED_DOCUMENTS = [
 const FAQS = [
   {
     id: "faq-1",
-    question: "What is the entry age bracket for each program?",
-    answer: "Playgroup: 1.5 to 2.5 Years. Nursery: 2.5 to 3.5 Years. Junior KG: 3.5 to 4.5 Years. Senior KG: 4.5 to 5.5 Years. Age calculations are typically computed as of 31st March of the academic year.",
+    question: "What are the school and office timings?",
+    answer: "School timings are from 9:00 AM to 12:00 PM. Office timings and daycare operations run from 8:00 AM to 7:00 PM. The academy is closed on Sundays.",
   },
   {
     id: "faq-2",
-    question: "What safety and security protocols are active at My Wings?",
-    answer: "Safety is our baseline. We have continuous CCTV coverage across all classrooms and gates, secure biometric registration for parent pick-up tokens, professional gatekeepers, and all cabinet edges are rounded to prevent bruises.",
+    question: "What is the entry age bracket for each program?",
+    answer: "Fun Club (Playgroup): 2 to 3 Years. Nursery: 3 to 4 Years. LKG: 4 to 5 Years. SR KG: 5 to 6 Years. Grade 1 Foundation: 6 to 7 Years. Calculations are computed as of the academic year start.",
   },
   {
     id: "faq-3",
-    question: "Does the school provide clean transport services?",
-    answer: "Yes, we operate air-conditioned school cabs with female attendants on board. All vans have GPS trackers, and routes are configured to keep child transit time under 30 minutes.",
+    question: "What is the child-to-teacher ratio at My Wings?",
+    answer: "We guarantee an individual 1:8 teacher-child ratio across all preschool programs. Additionally, there is one trained classroom helper in every single classroom to support the kids.",
   },
   {
     id: "faq-4",
-    question: "What is the child-to-teacher ratio at the academy?",
-    answer: "To ensure absolute care: Playgroup has a 1:6 ratio, Nursery has 1:8, and KG classes maintain a 1:10 or 1:12 ratio. Each classroom is staffed with a lead educator and a trained assistant.",
+    question: "Do you offer daycare/childcare services?",
+    answer: "Yes, our daycare operations run from 8:00 AM to 7:00 PM for children from 4 months onwards. We offer half-day and full-day configurations in a safe environment with CCTV monitoring, nap rest areas, and healthy meals.",
   },
   {
     id: "faq-5",
-    question: "Is there a child uniform requirement?",
-    answer: "Yes, to build unity and safety awareness, children wear customized cotton-blend play uniforms. The welcome kit collected during admission confirmation contains these sets.",
+    question: "What activities are available in the Saturday Activity Hub?",
+    answer: "Our Activity Hub Saturday programs include Drawing, Painting, Art & Craft, Dance, Music, Storytelling, Public Speaking, Personality Development, and motor skill enhancements. It is open to both My Wings students and external students with no age restriction.",
+  },
+  {
+    id: "faq-6",
+    question: "What classes are covered in Academic Support & Tuitions?",
+    answer: "We offer personalized tuition support for Nursery to Grade 10 students. We cover all subjects across CBSE, ICSE, and GSEB boards with a focus on individual attention and concept building.",
+  },
+  {
+    id: "faq-7",
+    question: "Does the school provide transport facilities?",
+    answer: "Yes, we operate safe transportation with GPS tracking and trained attendants to ensure safe pick-up and drop-offs across Vadodara.",
+  },
+  {
+    id: "faq-8",
+    question: "How do you track a child's developmental progress?",
+    answer: "We perform continuous evaluation mapping social skills, physical motor milestones, and phonics readiness. Regular parent-teacher logs are shared detailing developmental milestones.",
   },
 ]
 

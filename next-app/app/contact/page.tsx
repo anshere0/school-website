@@ -54,75 +54,75 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+918000291158"
                     className="font-sans font-bold text-sm text-primary-red hover:underline mt-4 block"
                     id="contact-phone-link"
                   >
-                    +91 98765 43210
+                    +91 80002 91158
                   </a>
                 </div>
 
                 {/* WhatsApp Card */}
-                <div className="p-6 rounded-3xl border border-dark-text/20 bg-cream-card text-left flex flex-col justify-between min-h-[160px]">
+                <div className="p-6 rounded-3xl border border-dark-text/20 bg-cream-card text-left flex flex-col justify-between min-h-[160px] shadow-sm">
                   <div>
                     <div className="h-9 w-9 rounded-xl bg-brand-green/10 border border-brand-green/20 flex items-center justify-center text-brand-green mb-3">
                       <MessageSquare className="h-5 w-5" />
                     </div>
                     <h3 className="font-heading text-base font-bold text-dark-text dark:text-foreground">
-                      WhatsApp Messaging
+                      WhatsApp Chat
                     </h3>
                     <p className="text-xs text-muted-foreground font-sans mt-1">
-                      Chat instantly with our admission counselors.
+                      Connect instantly with our school desk.
                     </p>
                   </div>
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/918000291158"
                     target="_blank"
                     rel="noreferrer"
                     className="font-sans font-bold text-sm text-brand-green hover:underline mt-4 block"
                     id="contact-whatsapp-link"
                   >
-                    Send WhatsApp Message
+                    +91 80002 91158
                   </a>
                 </div>
 
                 {/* Email Card */}
-                <div className="p-6 rounded-3xl border border-dark-text/20 bg-cream-card text-left flex flex-col justify-between min-h-[160px]">
+                <div className="p-6 rounded-3xl border border-dark-text/20 bg-cream-card text-left flex flex-col justify-between min-h-[160px] shadow-sm">
                   <div>
                     <div className="h-9 w-9 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue mb-3">
                       <Mail className="h-5 w-5" />
                     </div>
                     <h3 className="font-heading text-base font-bold text-dark-text dark:text-foreground">
-                      Email Communication
+                      Email admissions
                     </h3>
                     <p className="text-xs text-muted-foreground font-sans mt-1">
-                      Send official documents or request kit PDFs.
+                      Request kit details or submit docs.
                     </p>
                   </div>
                   <a
-                    href="mailto:admissions@mywingsacademy.com"
+                    href="mailto:leenachopra@yahoo.com"
                     className="font-sans font-bold text-sm text-brand-blue hover:underline mt-4 block"
                     id="contact-email-link"
                   >
-                    admissions@mywingsacademy.com
+                    leenachopra@yahoo.com
                   </a>
                 </div>
 
                 {/* Address Card */}
-                <div className="p-6 rounded-3xl border border-dark-text/20 bg-cream-card text-left flex flex-col justify-between min-h-[160px]">
+                <div className="p-6 rounded-3xl border border-dark-text/20 bg-cream-card text-left flex flex-col justify-between min-h-[160px] shadow-sm">
                   <div>
                     <div className="h-9 w-9 rounded-xl bg-primary-red/10 border border-primary-red/20 flex items-center justify-center text-primary-red mb-3">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <h3 className="font-heading text-base font-bold text-dark-text dark:text-foreground">
-                      Campus Location
+                      School Address
                     </h3>
                     <p className="text-xs text-muted-foreground font-sans mt-1">
-                      Sector 4, Creative Kidz Circle, New Delhi 110001
+                      B-34 Samruddhi Tenament, Opp. Priti Enclave, Near Amin Party Plot, Rajesh Tower Road, Vadodara, Gujarat – 390023
                     </p>
                   </div>
                   <span className="font-sans font-bold text-xs text-muted-foreground/80 mt-4 block">
-                    Near Metro-Park Circle
+                    Vadodara, Gujarat
                   </span>
                 </div>
 
@@ -142,29 +142,29 @@ export default function ContactPage() {
                   </p>
                   <div className="grid grid-cols-2 gap-4 mt-3 max-w-sm font-semibold text-dark-text/80 dark:text-foreground/90">
                     <div>
-                      <span className="block text-xs text-muted-foreground font-normal">Weekdays (Mon-Fri)</span>
-                      <span>08:00 AM - 01:30 PM</span>
-                    </div>
-                    <div>
-                      <span className="block text-xs text-muted-foreground font-normal">Saturdays</span>
+                      <span className="block text-xs text-muted-foreground font-normal">School Hours</span>
                       <span>09:00 AM - 12:00 PM</span>
                     </div>
+                    <div>
+                      <span className="block text-xs text-muted-foreground font-normal">Office Hours & Day Care</span>
+                      <span>08:00 AM - 07:00 PM</span>
+                    </div>
                   </div>
+                  <span className="block text-primary-red font-bold text-xs mt-2">&bull; Sunday Closed</span>
                 </div>
               </div>
 
-              {/* Direction Guide and Mock Map */}
-              <div className="h-72 w-full border-2 border-dark-text rounded-[2rem] shadow-warm bg-brand-blue/10 relative overflow-hidden flex flex-col justify-center items-center text-center p-6 border-dashed">
-                <Compass className="h-10 w-10 text-brand-blue animate-spin mb-3" />
-                <span className="font-heading font-bold text-dark-text/85 dark:text-foreground/80 text-lg">
-                  Interactive Direction Map
-                </span>
-                <span className="text-xs text-muted-foreground mt-1.5 max-w-sm leading-relaxed font-sans">
-                  The campus is located on the wide 80-feet ring road next to Central Park block-4. High safety indicators and designated cab pick-up points align the entrance pathways.
-                </span>
-                <Button className="mt-4 rounded-full bg-white text-dark-text hover:bg-muted border border-dark-text text-xs cursor-pointer">
-                  Get Google Maps Directions
-                </Button>
+              {/* Direction Guide and Map */}
+              <div className="h-80 w-full border-2 border-dark-text rounded-[2rem] shadow-warm bg-brand-blue/10 relative overflow-hidden">
+                <iframe
+                  title="My Wings Academy Vadodara Map"
+                  src="https://maps.google.com/maps?q=B-34%20Samruddhi%20Tenament%20Vadodara&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
               </div>
 
             </div>

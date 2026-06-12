@@ -1,6 +1,9 @@
 "use client"
 
+import { useEffect, useRef } from "react"
 import { Heart, Sparkles, Smile, Shield, Target, BookOpen, User } from "lucide-react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
@@ -8,49 +11,171 @@ import { SectionHeader } from "@/components/shared/SectionHeader"
 import { OrganicBlobImage } from "@/components/shared/OrganicBlobImage"
 
 export default function AboutPage() {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger)
+      
+      const ctx = gsap.context(() => {
+        // 1. Hero Reveal
+        const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.8 } })
+        tl.fromTo(".about-hero-badge", { opacity: 0, y: -15 }, { opacity: 1, y: 0 })
+          .fromTo(".about-hero-title", { opacity: 0, y: 25 }, { opacity: 1, y: 0 }, "-=0.6")
+          .fromTo(".about-hero-desc", { opacity: 0, y: 20 }, { opacity: 1, y: 0 }, "-=0.6")
+
+        // 2. Story Reveal
+        gsap.fromTo(".story-text",
+          { opacity: 0, x: -30 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: ".story-section",
+              start: "top 80%",
+            }
+          }
+        )
+        gsap.fromTo(".story-image",
+          { opacity: 0, scale: 0.95 },
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: ".story-section",
+              start: "top 80%",
+            }
+          }
+        )
+
+        // 3. Vision & Mission Purpose Cards
+        gsap.fromTo(".purpose-card",
+          { opacity: 0, y: 30, scale: 0.98 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "back.out(1.2)",
+            scrollTrigger: {
+              trigger: ".purpose-section",
+              start: "top 80%",
+            }
+          }
+        )
+
+        // 4. Founder Message
+        gsap.fromTo(".founder-image",
+          { opacity: 0, scale: 0.9, rotation: -2 },
+          {
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+            duration: 0.8,
+            ease: "back.out(1.2)",
+            scrollTrigger: {
+              trigger: ".founder-section",
+              start: "top 80%",
+            }
+          }
+        )
+        gsap.fromTo(".founder-text-wrapper",
+          { opacity: 0, x: 30 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: ".founder-section",
+              start: "top 80%",
+            }
+          }
+        )
+
+        // 5. Philosophy Cards Stagger
+        gsap.fromTo(".philosophy-card",
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            stagger: 0.12,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: ".philosophy-section",
+              start: "top 80%",
+            }
+          }
+        )
+
+        // 6. Final CTA Banner
+        gsap.fromTo(".about-cta-banner",
+          { opacity: 0, scale: 0.95 },
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: ".about-cta-section",
+              start: "top 85%",
+            }
+          }
+        )
+
+      }, containerRef)
+
+      return () => ctx.revert()
+    }
+  }, [])
   return (
     <div className="min-h-screen flex flex-col bg-background text-dark-text selection:bg-primary-yellow/30">
       <Navbar />
 
-      <main className="flex-1">
+      <main ref={containerRef} className="flex-1">
         {/* Header Hero Banner */}
         <section className="bg-primary-yellow/10 py-16 px-4 border-b border-border/20 text-center relative overflow-hidden">
           <div className="absolute top-0 right-[-10%] w-[30%] aspect-square bg-primary-red/5 rounded-full blur-3xl pointer-events-none" />
           <div className="container mx-auto max-w-3xl relative z-10 flex flex-col items-center gap-3">
-            <span className="text-xs font-bold text-primary-red uppercase tracking-widest font-sans bg-white border border-border/50 px-4 py-1.5 rounded-full">
+            <span className="text-xs font-bold text-primary-red uppercase tracking-widest font-sans bg-white border border-border/50 px-4 py-1.5 rounded-full about-hero-badge">
               Our Identity
             </span>
-            <h1 className="text-4xl md:text-5xl font-extrabold font-heading text-dark-text dark:text-foreground">
+            <h1 className="text-4xl md:text-5xl font-extrabold font-heading text-dark-text dark:text-foreground about-hero-title">
               About My Wings Academy
             </h1>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-xl font-sans mt-1">
+            <p className="text-sm sm:text-base text-muted-foreground max-w-xl font-sans mt-1 about-hero-desc">
               Discover the history, the team, and the core philosophies driving our children's daily learning.
             </p>
           </div>
         </section>
 
         {/* 1. SCHOOL STORY */}
-        <section className="py-20 px-4 sm:px-6">
+        <section className="py-20 px-4 sm:px-6 story-section">
           <div className="container mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Story Text */}
-            <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+            <div className="lg:col-span-7 flex flex-col gap-6 text-left story-text">
               <span className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-primary-red bg-primary-red/10 border border-primary-red/20 px-3 py-1 rounded-full self-start">
                 <Heart className="h-3.5 w-3.5 fill-current" /> Our Story
               </span>
               <h2 className="text-3xl font-bold font-heading text-dark-text leading-tight dark:text-foreground">
-                Fostering Creative Flight Since 2018
+                Fostering Creative Flight Since 2011
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-sans">
-                My Wings Academy was founded in 2018 with a simple vision: to construct a childhood environment where children are treated not as empty vessels to be filled with rules, but as curious flames to be nurtured. 
+                My Wings Academy was founded in 2011 with a simple vision: to construct a childhood environment where children are treated not as empty vessels to be filled with rules, but as curious flames to be nurtured. 
               </p>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-sans">
-                What started as a small, specialized play-circle of 15 children has grown into New Delhi's most trusted, premium child development facility. Today, we cater to over 400 families, maintaining our signature tiny classroom ratios and parent-inclusive educational models.
+                What started as a small, specialized play-circle of 15 children has grown into Vadodara's most trusted, premium child development facility. Today, we have successfully nurtured over 1500+ students, maintaining our signature tiny classroom ratios and parent-inclusive educational models.
               </p>
             </div>
 
             {/* Story Image Placeholder */}
-            <div className="lg:col-span-5 flex justify-center">
+            <div className="lg:col-span-5 flex justify-center story-image">
               <div className="w-full max-w-[320px] aspect-square relative">
                 <OrganicBlobImage
                   src="/images/gallery/story-foundation.png"
@@ -66,7 +191,7 @@ export default function AboutPage() {
         </section>
 
         {/* 2. VISION & MISSION */}
-        <section className="py-20 bg-cream-card/50 border-y-2 border-dashed border-border/40 px-4 sm:px-6">
+        <section className="py-20 bg-cream-card/50 border-y-2 border-dashed border-border/40 px-4 sm:px-6 purpose-section">
           <div className="container mx-auto max-w-5xl">
             <SectionHeader
               title="Our Purpose"
@@ -77,7 +202,7 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               {/* Vision Card */}
-              <div className="p-8 rounded-[2rem] border-2 border-dark-text bg-background shadow-warm relative overflow-hidden group">
+              <div className="p-8 rounded-[2rem] border-2 border-dark-text bg-background shadow-warm relative overflow-hidden group purpose-card">
                 <div className="absolute top-0 right-0 h-24 w-24 bg-primary-yellow/10 rounded-full blur-xl pointer-events-none" />
                 <div className="h-12 w-12 rounded-2xl bg-primary-yellow/20 border border-dark-text flex items-center justify-center mb-6">
                   <Smile className="h-6 w-6 text-dark-text" />
@@ -91,7 +216,7 @@ export default function AboutPage() {
               </div>
 
               {/* Mission Card */}
-              <div className="p-8 rounded-[2rem] border-2 border-dark-text bg-background shadow-warm relative overflow-hidden group">
+              <div className="p-8 rounded-[2rem] border-2 border-dark-text bg-background shadow-warm relative overflow-hidden group purpose-card">
                 <div className="absolute top-0 right-0 h-24 w-24 bg-brand-blue/10 rounded-full blur-xl pointer-events-none" />
                 <div className="h-12 w-12 rounded-2xl bg-brand-blue/20 border border-dark-text flex items-center justify-center mb-6">
                   <Target className="h-6 w-6 text-dark-text" />
@@ -108,15 +233,15 @@ export default function AboutPage() {
         </section>
 
         {/* 3. FOUNDER MESSAGE */}
-        <section className="py-20 px-4 sm:px-6">
+        <section className="py-20 px-4 sm:px-6 founder-section">
           <div className="container mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Portrait Image */}
-            <div className="lg:col-span-5 flex justify-center order-last lg:order-first">
+            <div className="lg:col-span-5 flex justify-center order-last lg:order-first founder-image">
               <div className="w-full max-w-[320px] aspect-square relative">
                 <OrganicBlobImage
                   src="/images/teachers/founder.png"
-                  alt="Founder Mrs. Neeta Sharma"
+                  alt="Founder Mrs. Leena Chopra Arora"
                   shape={3}
                   color="yellow"
                   placeholderIcon="smile"
@@ -125,7 +250,7 @@ export default function AboutPage() {
             </div>
 
             {/* Quote block */}
-            <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+            <div className="lg:col-span-7 flex flex-col gap-6 text-left founder-text-wrapper">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-green/10 text-brand-green border border-brand-green/20 self-start">
                 <User className="h-3.5 w-3.5" /> Founder Message
               </span>
@@ -135,19 +260,25 @@ export default function AboutPage() {
               
               <div className="flex flex-col gap-4 font-sans text-sm sm:text-base text-muted-foreground leading-relaxed italic border-l-4 border-l-primary-yellow pl-4">
                 <p>
-                  "As parents, we are often tempted to rush our children into academic templates, expecting spelling and counting tests. But early neurology tells us that emotional regulation, social coordination, and active sensory reasoning are the absolute anchors of future cognitive success."
+                  "As a Graduate in Psychology, I understand that early childhood development relies heavily on emotional regulation, social coordination, and active sensory reasoning. These are the absolute anchors of future cognitive success."
                 </p>
                 <p>
-                  "We built My Wings Academy to be a sanctuary of discovery. When you visit us, you won't see children memorizing sheets; you will see them solving puzzles, building clay circles, and expressing ideas fearlessly. That is where real intellect takes flight."
+                  "We built My Wings Academy to be a sanctuary of discovery. We combine activity-based learning and confidence-building to ensure a strong educational foundation. When you visit us, you won't see children memorizing sheets; you will see them solving puzzles, building clay circles, and expressing ideas fearlessly. That is where real intellect takes flight."
                 </p>
               </div>
 
-              <div className="flex flex-col mt-2">
+              <div className="flex flex-col mt-2 font-sans">
                 <span className="font-heading font-bold text-base text-dark-text dark:text-foreground">
-                  Mrs. Neeta Sharma
+                  Leena Chopra Arora
                 </span>
-                <span className="text-xs text-muted-foreground">
-                  Founder & Principal Director, My Wings Academy
+                <span className="text-xs text-muted-foreground font-semibold">
+                  Founder • Principal • Trustee
+                </span>
+                <span className="text-[11px] text-muted-foreground">
+                  Graduate in Psychology &bull; Graphic Designer &bull; Motivational Speaker
+                </span>
+                <span className="text-[11px] text-muted-foreground font-medium">
+                  20+ Years Experience &bull; 1500+ Students Successfully Nurtured Since 2011
                 </span>
               </div>
             </div>
@@ -156,7 +287,7 @@ export default function AboutPage() {
         </section>
 
         {/* 4. TEACHING PHILOSOPHY */}
-        <section className="py-20 bg-cream-card/30 border-t-2 border-border/40 px-4 sm:px-6">
+        <section className="py-20 bg-cream-card/30 border-t-2 border-border/40 px-4 sm:px-6 philosophy-section">
           <div className="container mx-auto max-w-5xl">
             <SectionHeader
               title="Our Teaching Philosophy"
@@ -187,7 +318,7 @@ export default function AboutPage() {
                 return (
                   <div
                     key={idx}
-                    className="p-6 rounded-3xl border border-dark-text/20 bg-background shadow-sm hover:scale-[1.01] transition-transform"
+                    className="p-6 rounded-3xl border border-dark-text/20 bg-background shadow-sm hover:scale-[1.01] transition-transform philosophy-card"
                   >
                     <div className="h-10 w-10 rounded-xl bg-primary-yellow/10 border border-primary-yellow/20 flex items-center justify-center mb-4">
                       <Icon className="h-5 w-5 text-dark-text" />
@@ -206,9 +337,9 @@ export default function AboutPage() {
         </section>
 
         {/* 5. WHY MY WINGS ACADEMY */}
-        <section className="py-20 px-4 sm:px-6">
+        <section className="py-20 px-4 sm:px-6 about-cta-section">
           <div className="container mx-auto max-w-5xl">
-            <div className="p-8 sm:p-12 rounded-[2rem] border-2 border-dark-text bg-primary-yellow text-dark-text shadow-warm relative overflow-hidden">
+            <div className="p-8 sm:p-12 rounded-[2rem] border-2 border-dark-text bg-primary-yellow text-dark-text shadow-warm relative overflow-hidden about-cta-banner">
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#2d2d2d_2.5px,transparent_2.5px)] [background-size:20px_20px] pointer-events-none" />
               
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

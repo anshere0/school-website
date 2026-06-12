@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { Heart, Sparkles, Smile, GraduationCap, Palette, Trophy } from "lucide-react"
+import { Heart, Sparkles, Smile, GraduationCap, Palette, Trophy, Music } from "lucide-react"
 
 interface OrganicBlobImageProps {
   src?: string
@@ -10,7 +10,7 @@ interface OrganicBlobImageProps {
   shape?: 1 | 2 | 3 | 4
   className?: string
   color?: "yellow" | "red" | "blue" | "green"
-  placeholderIcon?: "heart" | "sparkles" | "smile" | "education" | "art" | "trophy"
+  placeholderIcon?: "heart" | "sparkles" | "smile" | "education" | "art" | "trophy" | "music"
 }
 
 export function OrganicBlobImage({
@@ -42,6 +42,7 @@ export function OrganicBlobImage({
     education: GraduationCap,
     art: Palette,
     trophy: Trophy,
+    music: Music,
   }
 
   const IconComponent = icons[placeholderIcon]
